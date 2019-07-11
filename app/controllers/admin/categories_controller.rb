@@ -11,7 +11,7 @@ class Admin::CategoriesController < ApplicationController
         @category = Category.new(product_params)
     
         if @category.save
-          redirect_to [:admin, :products], notice: 'Product created!'
+          redirect_to [:admin, :categories], notice: 'Category created!'
         else
           render :new
         end
