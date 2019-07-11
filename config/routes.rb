@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
-  resources :users, only: [:index]
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
   resource :cart, only: [:show] do
     post   :add_item
