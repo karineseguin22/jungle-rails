@@ -5,10 +5,14 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @user = User.new(params[:user])
+
     charge = perform_stripe_charge
     order  = create_order(charge)
-
+    
+    respond_to do 
     if order.valid?
+      UserMailer.with(user: @user).welcome_email
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
