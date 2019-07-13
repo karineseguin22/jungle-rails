@@ -6,10 +6,10 @@ class UserMailer < ApplicationMailer
         @order = order 
         puts 'Hello'
         puts @order.id
-        puts @order
-        puts @user.email 
+        puts @order.email 
+        puts @order.line_items
         @url  = 'http://example.com/login'
-        mail(to: @user.email, 
+        mail(to: @order.email, 
             subject: @order.id) do |format|
             format.html {render 'welcome_email'}
             format.text { render plain: 'Render text'}

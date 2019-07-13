@@ -9,6 +9,10 @@
     <p>
       Your order id: <%= @order%> 
       <%= @order.id%> 
+      <%@order.line_items do |line_item|%>
+        <%= render 'item', product_id: line_item.product_id, line_total: line_item.total_price%>
+        <% end%>
+         Your order total: <%= humanized_money_with_symbol @order.total %>
     </p>
     <p>
       You have successfully signed up to example.com,
