@@ -135,6 +135,9 @@ cat3.products.create!({
 ##Reviews 
 
 #create a review associated with that product
+
+Review.destroy_all
+
 product.reviews.create!({
   product_id: 1,
   user_id: 1,
