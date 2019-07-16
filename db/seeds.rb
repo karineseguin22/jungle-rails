@@ -132,5 +132,14 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+##Reviews 
+
+#create a review associated with that product
+product.reviews.create!({
+  product_id: 1,
+  user_id: 1,
+  description:'Best movie ever!!!',
+  rating: 5
+})
 
 puts "DONE!"
