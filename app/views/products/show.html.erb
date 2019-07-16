@@ -40,8 +40,8 @@
         <ul>
         <%@product.reviews.each do |review|%>
         <li>Rating: <%=review.rating%></li>
-        <li>Descripton: <%=review.description%></li>
-        <li></li>
+        <li>Description: <%=review.description%></li>
+        <li>User: <%=review.user_id %></li>
         <%end%> 
         </ul> 
       </div>
