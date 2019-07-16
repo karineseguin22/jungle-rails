@@ -136,13 +136,17 @@ cat3.products.create!({
 
 #create a review associated with that product
 
+products = Product.all
 Review.destroy_all
 
+
+products.each do |product|
+  2.times do 
 product.reviews.create!({
-  product_id: 1,
   user_id: 1,
   description:'Best movie ever!!!',
   rating: 5
 })
-
+end
+end
 puts "DONE!"
