@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application where I added features such as a sold out badge for items with 0 quantity, a new section where admins can create their own category, user authentication, order details, email receipt after customer purchase an item, and product rating. 
 
 
 ## Setup
